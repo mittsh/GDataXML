@@ -1,7 +1,6 @@
 # GDataXML
 
-This project is a repackaging of GDataXML and HtmlTidy for use on iOS with
-Xcode4. It contains some added convenience code and unit tests written by
+This project is a repackaging of GDataXML and HtmlTidy for use on iOS and OS X. It contains some added convenience code and unit tests written by
 me, but it is mostly written by other people.
 
 ## Origin
@@ -21,9 +20,18 @@ It depends on code which normally lives here:
 
 ## Usage
 
+### iOS
+
 1. In Build Settings -> Header Search Paths, add "/usr/include/libxml2".
 2. In Build Phases -> Target Dependencies, add "GDataXML".
 3. In Build Phases -> Link Binary with Libraries, add "libGDataXML.a"
+
+### OS X
+
+1. In Build Settings -> Header Search Paths, add "/usr/include/libxml2".
+2. In Build Phases -> Target Dependencies, add "GDataXMLFramework (GDataXML)"
+3. In Build Phases -> Link Binary with Libraries, add "GDataXMLFramework.framework"
+4. In your .c files, add: #import <GDataXMLFramework/GDataXMLFramework.h>
 
 ## Apps using it
 
